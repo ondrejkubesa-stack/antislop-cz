@@ -1,0 +1,80 @@
+{
+ "missing_replacement": [
+  {
+   "id": "cs-test-doba",
+   "lang": "cs",
+   "category": "phrase",
+   "kind": "regex",
+   "regex": "v dnešní (uspěchané )?době",
+   "severity": "rewrite",
+   "profiles": [],
+   "why": "Vata na začátku.",
+   "replacement": "",
+   "example_before": "V dnešní uspěchané době je čas vzácný.",
+   "example_after": "Na poradu máme dvacet minut.",
+   "source": "vault"
+  }
+ ],
+ "bad_regex": [
+  {
+   "id": "cs-test-doba",
+   "lang": "cs",
+   "category": "phrase",
+   "kind": "regex",
+   "regex": "(unclosed",
+   "severity": "rewrite",
+   "profiles": [],
+   "why": "Vata na začátku.",
+   "replacement": "Začni rovnou tvrzením.",
+   "example_before": "V dnešní uspěchané době je čas vzácný.",
+   "example_after": "Na poradu máme dvacet minut.",
+   "source": "vault"
+  }
+ ],
+ "duplicate_id": [
+  {
+   "id": "cs-test-doba",
+   "lang": "cs",
+   "category": "phrase",
+   "kind": "regex",
+   "regex": "v dnešní (uspěchané )?době",
+   "severity": "rewrite",
+   "profiles": [],
+   "why": "Vata na začátku.",
+   "replacement": "Začni rovnou tvrzením.",
+   "example_before": "V dnešní uspěchané době je čas vzácný.",
+   "example_after": "Na poradu máme dvacet minut.",
+   "source": "vault"
+  },
+  {
+   "id": "cs-test-doba",
+   "lang": "cs",
+   "category": "phrase",
+   "kind": "regex",
+   "regex": "v dnešní (uspěchané )?době",
+   "severity": "rewrite",
+   "profiles": [],
+   "why": "Vata na začátku.",
+   "replacement": "Začni rovnou tvrzením.",
+   "example_before": "V dnešní uspěchané době je čas vzácný.",
+   "example_after": "Na poradu máme dvacet minut.",
+   "source": "vault"
+  }
+ ],
+ "unknown_severity": [
+  {
+   "id": "cs-test-doba",
+   "lang": "cs",
+   "category": "phrase",
+   "kind": "regex",
+   "regex": "v dnešní (uspěchané )?době",
+   "severity": "fatal",
+   "profiles": [],
+   "why": "Vata na začátku.",
+   "replacement": "Začni rovnou tvrzením.",
+   "example_before": "V dnešní uspěchané době je čas vzácný.",
+   "example_after": "Na poradu máme dvacet minut.",
+   "source": "vault"
+  }
+ ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "antislop-cz",
+  "owner": { "name": "Ondřej Kubesa" },
+  "plugins": [
+    {
+      "name": "antislop-cz",
+      "source": "./",
+      "description": "Find and replace AI slop in Czech and English texts."
+    }
+  ]
+}

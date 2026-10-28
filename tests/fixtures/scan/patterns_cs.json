@@ -1,0 +1,14 @@
+[
+  {"id": "cs-t-doba", "lang": "cs", "category": "phrase", "kind": "regex",
+   "regex": "v dnešní (uspěchané |digitální )?době", "severity": "rewrite", "profiles": [],
+   "why": "Vata.", "replacement": "Začni tvrzením.", "example_before": "V dnešní době.",
+   "example_after": "Dnes.", "source": "vault"},
+  {"id": "cs-t-hry", "lang": "cs", "category": "phrase", "kind": "regex",
+   "regex": "mění pravidla hry", "severity": "rewrite", "profiles": [],
+   "why": "Klišé.", "replacement": "Řekni, co konkrétně se mění.", "example_before": "Tohle mění pravidla hry.",
+   "example_after": "Faktura odejde o den dřív.", "source": "author"},
+  {"id": "cs-t-email", "lang": "cs", "category": "phrase", "kind": "regex",
+   "regex": "doufám, že se máte (dobře|skvěle)", "severity": "watch", "profiles": ["email"],
+   "why": "Výplň.", "replacement": "Rovnou k věci.", "example_before": "Doufám, že se máte dobře.",
+   "example_after": "Posílám nabídku.", "source": "praxe"}
+]

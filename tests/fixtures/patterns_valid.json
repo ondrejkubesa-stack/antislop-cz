@@ -1,0 +1,12 @@
+[
+  {"id": "cs-test-doba", "lang": "cs", "category": "phrase", "kind": "regex",
+   "regex": "v dnešní (uspěchané )?době", "severity": "rewrite", "profiles": [],
+   "why": "Vata na začátku.", "replacement": "Začni rovnou tvrzením.",
+   "example_before": "V dnešní uspěchané době je čas vzácný.",
+   "example_after": "Na poradu máme dvacet minut.", "source": "vault"},
+  {"id": "x-em-dash", "lang": "x", "category": "punctuation", "kind": "heuristic",
+   "regex": null, "severity": "zero", "profiles": [],
+   "why": "Dlouhá pomlčka.", "replacement": "Čárka nebo nová věta.",
+   "example_before": "Je to rychlé — a levné.", "example_after": "Je to rychlé a levné.",
+   "source": "praxe"}
+]

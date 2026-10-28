@@ -1,0 +1,8 @@
+{
+  "name": "antislop-cz",
+  "version": "0.1.2",
+  "description": "Find and replace AI slop in Czech and English texts: phrases, rhythm, structure, calques, punctuation, emoji and formatting.",
+  "author": { "name": "Ondřej Kubesa" },
+  "license": "MIT",
+  "keywords": ["writing", "antislop", "czech", "english", "style", "linter"]
+}

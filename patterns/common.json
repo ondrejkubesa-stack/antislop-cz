@@ -1,0 +1,202 @@
+[
+ {
+  "id": "x-em-dash",
+  "lang": "x",
+  "category": "punctuation",
+  "kind": "heuristic",
+  "regex": null,
+  "severity": "zero",
+  "profiles": [],
+  "why": "Dlouhá pomlčka „—“ je anglický typografický zvyk, který modely přenášejí do češtiny. V češtině se pomlčka píše jako „ – “ s mezerami (ta je jen upozornění). Vyhazovat dlouhou pomlčku je stylová volba antislopu, ne pravidlo pravopisu.",
+  "replacement": "Čárka, dvojtečka, závorka nebo nová věta. Pomlčka jen v rozsazích (5–10).",
+  "example_before": "Je to rychlé — a levné.",
+  "example_after": "Je to rychlé a levné.",
+  "source": "praxe",
+  "en": {
+   "why": "The em dash is a typographic habit models carry into every text. Removing it is antislop's style choice, not a spelling rule; a spaced en dash ( – ) is only a warning.",
+   "replacement": "Comma, colon, brackets or a new sentence. Keep dashes in ranges (5–10).",
+   "example_before": "It is fast — and cheap.",
+   "example_after": "It is fast and cheap."
+  }
+ },
+ {
+  "id": "x-arrow",
+  "lang": "x",
+  "category": "punctuation",
+  "kind": "heuristic",
+  "regex": null,
+  "severity": "rewrite",
+  "profiles": [],
+  "why": "Šipka místo věty. Jako odrážka na začátku řádku je to nulová tolerance; v tabulkách a technických schématech se nehlásí.",
+  "replacement": "Normální věta, nebo číslovaný seznam.",
+  "example_before": "Vstup → výstup.",
+  "example_after": "Ze vstupu vznikne výstup.",
+  "source": "praxe",
+  "en": {
+   "why": "An arrow instead of a sentence. As a bullet at the start of a line it is zero tolerance; tables and technical diagrams are skipped.",
+   "replacement": "A normal sentence or a numbered list.",
+   "example_before": "Input → output.",
+   "example_after": "The input becomes the output."
+  }
+ },
+ {
+  "id": "x-emoji",
+  "lang": "x",
+  "category": "emoji",
+  "kind": "heuristic",
+  "regex": null,
+  "severity": "zero",
+  "profiles": [],
+  "why": "Emoji v publikovaném nebo pracovním textu. V e-mailu jen upozornění.",
+  "replacement": "Vypusť; tón nes slovy.",
+  "example_before": "Hotovo 🚀",
+  "example_after": "Hotovo, nasazeno v 9:00.",
+  "source": "praxe",
+  "en": {
+   "why": "Emoji in work or published text. In emails only a warning.",
+   "replacement": "Remove it; let the words carry the tone.",
+   "example_before": "Done 🚀",
+   "example_after": "Done, deployed at 9:00."
+  }
+ },
+ {
+  "id": "x-question-fragment",
+  "lang": "x",
+  "category": "construction",
+  "kind": "heuristic",
+  "regex": null,
+  "severity": "rewrite",
+  "profiles": [],
+  "why": "Otázka a útržek místo věty („Výsledek? Rychlejší práce.“). Úderná věta na povel.",
+  "replacement": "Jedna plynulá věta s tím, v čem přesně.",
+  "example_before": "Výsledek? Rychlejší práce.",
+  "example_after": "Objednávku teď vyřídíme za den místo za dva.",
+  "source": "author",
+  "en": {
+   "why": "A one- or two-word teaser question followed by a fragment (\"Result? Faster work.\"). A punchline on cue.",
+   "replacement": "One sentence that says exactly what changed.",
+   "example_before": "Result? Faster work.",
+   "example_after": "Orders now ship in one day instead of two."
+  }
+ },
+ {
+  "id": "x-staccato",
+  "lang": "x",
+  "category": "rhythm",
+  "kind": "heuristic",
+  "regex": null,
+  "severity": "rewrite",
+  "profiles": [],
+  "why": "Tři a víc krátkých vět za sebou. Působí úderně, čte se strojově.",
+  "replacement": "Spoj do souvětí, krátkou větu nech jen jako pointu.",
+  "example_before": "Je to rychlé. Je to levné. Funguje to hned.",
+  "example_after": "Je to rychlé a levné a funguje bez nastavování.",
+  "source": "author",
+  "en": {
+   "why": "Three or more short sentences in a row. Sounds punchy, reads as machine-made.",
+   "replacement": "Join them into one sentence; keep a short one only as the punchline.",
+   "example_before": "It's fast. It's cheap. It works now.",
+   "example_after": "It's fast and cheap and works without setup."
+  }
+ },
+ {
+  "id": "x-bold-lead-bullets",
+  "lang": "x",
+  "category": "format",
+  "kind": "heuristic",
+  "regex": null,
+  "severity": "rewrite",
+  "profiles": [],
+  "why": "Odrážky, které všechny začínají tučným štítkem. Je to formát typický pro výstup chatovacích modelů [Sun 2025], sám o sobě ale AI nedokazuje; vadí hlavně čitelnosti, protože z textu dělá osnovu.",
+  "replacement": "Plynulý text, nebo odrážky bez štítků.",
+  "example_before": "- **Rychlost:** a\n- **Cena:** b\n- **Podpora:** c",
+  "example_after": "Je to rychlé, levné a podpora odpoví do hodiny.",
+  "source": "research:sun2025",
+  "en": {
+   "why": "Every bullet opens with a bold label. Typical of chat model output [Sun 2025], though it does not prove AI on its own; it mainly turns text into an outline.",
+   "replacement": "Prose, or bullets without labels.",
+   "example_before": "- **Speed:** a\n- **Price:** b\n- **Support:** c",
+   "example_after": "It is fast, cheap, and support answers within an hour."
+  }
+ },
+ {
+  "id": "x-bold-density",
+  "lang": "x",
+  "category": "format",
+  "kind": "heuristic",
+  "regex": null,
+  "severity": "watch",
+  "profiles": [],
+  "why": "Moc tučného písma; zvýraznění přestává fungovat.",
+  "replacement": "Nech tučně nejvýš jednu věc na odstavec.",
+  "example_before": "**Rychle** a **levně** a **hned**.",
+  "example_after": "Rychle a levně.",
+  "source": "research:sun2025",
+  "en": {
+   "why": "Too much bold; emphasis stops working.",
+   "replacement": "At most one bold item per paragraph.",
+   "example_before": "**Fast** and **cheap** and **now**.",
+   "example_after": "Fast and cheap."
+  }
+ },
+ {
+  "id": "x-title-case-heading",
+  "lang": "x",
+  "category": "format",
+  "kind": "heuristic",
+  "regex": null,
+  "severity": "rewrite",
+  "profiles": [],
+  "why": "Nadpis s velkými písmeny u každého slova. V češtině chyba, v angličtině styl, který prozrazuje šablonu.",
+  "replacement": "Velké jen první písmeno (a vlastní jména).",
+  "example_before": "# Jak Napsat Dobrý Text",
+  "example_after": "# Jak napsat dobrý text",
+  "source": "praxe",
+  "en": {
+   "why": "Capitalising every word of a heading gives away the template.",
+   "replacement": "Sentence case: capitalise only the first word and proper names.",
+   "example_before": "# How To Write Good Text",
+   "example_after": "# How to write good text"
+  }
+ },
+ {
+  "id": "x-rhythm-flat",
+  "lang": "x",
+  "category": "rhythm",
+  "kind": "heuristic",
+  "regex": null,
+  "severity": "watch",
+  "profiles": [],
+  "why": "Věty skoro stejně dlouhé; slabý signál, platí jen u textů nad 150 slov [Muñoz-Ortiz 2023].",
+  "replacement": "Prostřídej krátkou větu a delší souvětí.",
+  "example_before": "(text s monotónní délkou vět)",
+  "example_after": "(text, kde se délky vět střídají)",
+  "source": "research:munozortiz2023",
+  "en": {
+   "why": "Sentences of almost the same length. A weak signal, only for texts over 150 words [Muñoz-Ortiz 2023].",
+   "replacement": "Mix a short sentence with a longer one.",
+   "example_before": "(text with uniform sentence length)",
+   "example_after": "(text with varied sentence length)"
+  }
+ },
+ {
+  "id": "x-excess-vocab",
+  "lang": "x",
+  "category": "vocabulary",
+  "kind": "heuristic",
+  "regex": null,
+  "severity": "watch",
+  "profiles": [],
+  "why": "Nadužívaná slova vadí v hustotě, ne jednotlivě [Kobak 2024].",
+  "replacement": "Nahraď číslem, nástrojem nebo situací.",
+  "example_before": "(text s několika slovy ze seznamu)",
+  "example_after": "(text s konkrétními údaji)",
+  "source": "research:kobak2024",
+  "en": {
+   "why": "Overused words hurt in density, not one by one [Kobak 2024].",
+   "replacement": "Use a plainer word or a specific fact.",
+   "example_before": "(text with several words from the list)",
+   "example_after": "(text with specific details)"
+  }
+ }
+]
